@@ -43,13 +43,13 @@ public class EvaluacionT1 {
             System.out.print("Número de documento: ");
             String numeroDocumento = sc.nextLine();
             p.setNumeroDocumento(numeroDocumento);
-try{
-            System.out.print("Ingrese fecha de nacimiento (Año-mes-dia)");
-            String nac = sc.nextLine();
-            p.setFechaNacimiento(LocalDate.parse(nac));}
- catch (DateTimeParseException ex) {
-     System.out.println("Error");
-                
+            try {
+                System.out.print("Ingrese fecha de nacimiento (Año-mes-dia)");
+                String nac = sc.nextLine();
+                p.setFechaNacimiento(LocalDate.parse(nac));
+            } catch (DateTimeParseException ex) {
+                System.out.println("Error");
+
             }
 
             System.out.print("Celular: ");
