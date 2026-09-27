@@ -20,7 +20,7 @@ public class ControladorPersona {
         System.out.println("La lista de personas es:");
         for(int i=0; i<lista.size();i++){
             Persona  p = lista.get(i);
-            //p.verDatos();
+            
         }
     }
     
