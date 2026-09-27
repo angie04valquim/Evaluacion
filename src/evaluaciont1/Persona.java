@@ -11,17 +11,17 @@ import java.time.LocalDate;
  * @author LENOVO
  */
 public class Persona {
-   
+
     private String nombre;
     private String apellidoPaterno;
     private String apellidoMaterno;
-     private String tipoDocumento;
+    private String tipoDocumento;
     private String numeroDocumento;
     private LocalDate fechaNacimiento;
-     private String celular;
+    private String celular;
     private String correo;
     private String alergia;
-       private String tipoSangre;
+    private String tipoSangre;
 
     public Persona() {
     }
@@ -117,10 +117,13 @@ public class Persona {
     }
 
     public void setCelular(String celular) {
-        if (celular == null || celular.length() != 9) {
-            System.out.println("Error el celular debe tener 9 dígitos");}
-        
+        if (celular.length() != 9) {
+            System.out.println("El celulcar debe tener 9 digitos");
+
+        } else {
             this.celular = celular;
+        }
+
     }
 
     public String getCorreo() {
@@ -147,8 +150,7 @@ public class Persona {
         this.tipoSangre = tipoSangre;
     }
 
-    
-   public void verDatos() {
+    public void verDatos() {
         System.out.println("Nombres: " + this.nombre);
         System.out.println("Apellido Paterno: " + this.apellidoPaterno);
         System.out.println("Apellido Materno: " + this.apellidoMaterno);

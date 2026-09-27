@@ -5,6 +5,7 @@
 package evaluaciont1;
 
 import java.time.LocalDate;
+import java.time.format.DateTimeParseException;
 import java.util.Scanner;
 
 /**
@@ -42,14 +43,19 @@ public class EvaluacionT1 {
             System.out.print("Número de documento: ");
             String numeroDocumento = sc.nextLine();
             p.setNumeroDocumento(numeroDocumento);
-
+try{
             System.out.print("Ingrese fecha de nacimiento (Año-mes-dia)");
             String nac = sc.nextLine();
-            p.setFechaNacimiento(LocalDate.parse(nac));
+            p.setFechaNacimiento(LocalDate.parse(nac));}
+ catch (DateTimeParseException ex) {
+     System.out.println("Error");
+                
+            }
 
             System.out.print("Celular: ");
             String celular = sc.nextLine();
             p.setCelular(celular);
+
 
             System.out.print("Correo: ");
             String correo = sc.nextLine();
